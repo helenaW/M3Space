@@ -17,15 +17,9 @@ nav {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -webkit-transform: translate3d(25px, -25px, 0);
-          transform: translate3d(25px, -25px, 0);
-  transition: -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
-  transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
-  transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9), -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
 }
 nav.open {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+
 }
 nav.top-right {
   top: -140px;
@@ -41,18 +35,12 @@ nav.top-right {
   line-height: 40px;
   padding-top: 10px;
   border-radius: 100%;
-  -webkit-transform: scale3d(0.5, 0.5, 0.5) rotate3d(0, 0, 1, 190deg);
-          transform: scale3d(0.5, 0.5, 0.5) rotate3d(0, 0, 1, 190deg);
   pointer-events: none;
   opacity: 0;
   cursor: pointer;
-  transition: opacity 0.5s, -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
-  transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9), opacity 0.5s;
-  transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9), opacity 0.5s, -webkit-transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
 }
 .disc div {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+
 }
 .open .disc {
   pointer-events: auto;
@@ -68,9 +56,7 @@ nav.top-right {
   transition-delay: 0s;
 }
 .open .l1 {
-  transition-delay: 0s;
-  -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
-          transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
+  transition-delay: 0.4s;
   opacity: 1;
 }
 .open .l1:hover {
@@ -83,8 +69,7 @@ nav.top-right {
   color: tomato;
 }
 .open .l1.toggle {
-  -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
-          transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
+
 }
 
 .l2 {
@@ -96,9 +81,8 @@ nav.top-right {
   transition-delay: 0.1s;
 }
 .open .l2 {
-  transition-delay: 0.1s;
-  -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
-          transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
+  transition-delay: 0.3s;
+
   opacity: 1;
 }
 .open .l2:hover {
@@ -111,8 +95,7 @@ nav.top-right {
   color: #ff7a39;
 }
 .open .l2.toggle {
-  -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
-          transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
+
 }
 
 .l3 {
@@ -125,8 +108,7 @@ nav.top-right {
 }
 .open .l3 {
   transition-delay: 0.2s;
-  -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
-          transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
+
   opacity: 1;
 }
 .open .l3:hover {
@@ -139,8 +121,7 @@ nav.top-right {
   color: #ff912b;
 }
 .open .l3.toggle {
-  -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
-          transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
+
 }
 
 .l4 {
@@ -152,9 +133,7 @@ nav.top-right {
   transition-delay: 0.3s;
 }
 .open .l4 {
-  transition-delay: 0.3s;
-  -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
-          transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
+  transition-delay: 0.1s;
   opacity: 1;
 }
 .open .l4:hover {
@@ -167,8 +146,7 @@ nav.top-right {
   color: #ffa91c;
 }
 .open .l4.toggle {
-  -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
-          transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
+
 }
 
 .l5 {
@@ -180,23 +158,21 @@ nav.top-right {
   transition-delay: 0.4s;
 }
 .open .l5 {
-  transition-delay: 0.4s;
-  -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
-          transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
+  transition-delay: 0s;
+
   opacity: 1;
 }
 .open .l5:hover {
-  background: shade(#ffc00e, 90%);
-  color: #ffc00e;
+  background: shade(black, 90%);
+  color: black;
   transition-delay: 0s;
 }
 .open .l5:active {
-  background: shade(#ffc00e, 50%);
-  color: #ffc00e;
+  background: shade(black, 50%);
+  color: black;
 }
 .open .l5.toggle {
-  -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
-          transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
+
 }
 
 .toggle {
@@ -210,17 +186,14 @@ nav.top-right {
   transition-delay: 0s;
 }
 .open .toggle {
-  -webkit-transform: rotate3d(0, 0, 1, 0deg);
-          transform: rotate3d(0, 0, 1, 0deg);
+
 }
 .toggle:hover {
-  background: shade(gold, 90%);
-  color: gold;
+  background: shade(black, 90%);
+  color: black;
 }
 .toggle:active {
   background: shade(gold, 50%);
   color: rgba(255, 215, 0, 0.5);
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
   transition-duration: 0s;
 }

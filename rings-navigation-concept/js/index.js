@@ -13,6 +13,18 @@ toggle.addEventListener('click', function() {
   }
 }, false);
 
+
+document.getElementById("disc5").addEventListener("mouseenter", rotatel5);
+
+var degree = 0;
+
+function rotatel5(){
+degree++;
+document.getElementById("disc5").style.transform = "rotate("+degree+"deg)";
+}
+
+
+
 setTimeout(function(){
 	nav.classList.toggle('open');	
 }, 800);
