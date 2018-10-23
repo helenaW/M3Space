@@ -60,13 +60,13 @@ nav.top-right {
   opacity: 1;
 }
 .open .l1:hover {
-  background: shade(tomato, 90%);
-  color: tomato;
+  background: shade(black, 90%);
+  color: black;
   transition-delay: 0s;
 }
 .open .l1:active {
-  background: shade(tomato, 50%);
-  color: tomato;
+  background: shade(black, 50%);
+  color: black;
 }
 .open .l1.toggle {
 
@@ -86,13 +86,13 @@ nav.top-right {
   opacity: 1;
 }
 .open .l2:hover {
-  background: shade(#ff7a39, 90%);
-  color: #ff7a39;
+  background: shade(black, 90%);
+  color: black;
   transition-delay: 0s;
 }
 .open .l2:active {
-  background: shade(#ff7a39, 50%);
-  color: #ff7a39;
+  background: shade(black, 50%);
+  color: black;
 }
 .open .l2.toggle {
 
@@ -112,13 +112,13 @@ nav.top-right {
   opacity: 1;
 }
 .open .l3:hover {
-  background: shade(#ff912b, 90%);
-  color: #ff912b;
+  background: shade(black, 90%);
+  color: black;
   transition-delay: 0s;
 }
 .open .l3:active {
-  background: shade(#ff912b, 50%);
-  color: #ff912b;
+  background: shade(black, 50%);
+  color: black;
 }
 .open .l3.toggle {
 
@@ -137,13 +137,13 @@ nav.top-right {
   opacity: 1;
 }
 .open .l4:hover {
-  background: shade(#ffa91c, 90%);
-  color: #ffa91c;
+  background: shade(black, 90%);
+  color: black;
   transition-delay: 0s;
 }
 .open .l4:active {
-  background: shade(#ffa91c, 50%);
-  color: #ffa91c;
+  background: shade(black, 50%);
+  color: black;
 }
 .open .l4.toggle {
 
