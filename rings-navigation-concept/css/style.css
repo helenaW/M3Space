@@ -39,7 +39,8 @@ nav.top-right {
   opacity: 0;
   cursor: pointer;
 }
-.disc div {
+.discDiv {
+z-index: 0;
 
 }
 .open .disc {
@@ -156,6 +157,7 @@ nav.top-right {
   bottom: 170px;
   background: #ffc00e;
   transition-delay: 0.4s;
+  z-index: 50;
 }
 .open .l5 {
   transition-delay: 0s;
@@ -196,4 +198,27 @@ nav.top-right {
   background: shade(gold, 50%);
   color: rgba(255, 215, 0, 0.5);
   transition-duration: 0s;
+}
+#interaction {
+  position: absolute;
+  Height: 100vh;
+  width: 100%;
+  z-index: 1000;
+ 
+
+  
+  
+  /*
+  z-index: 1000;
+  width: 500px;
+  height: 500px;
+  top: 250px;
+  right: 250px;
+  */
+}
+
+#zIndexShift{
+  position: absolute;
+  top: 0;
+  z-index: 5000;
 }
