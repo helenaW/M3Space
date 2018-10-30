@@ -315,7 +315,7 @@ class Pointers {
     const angle = (360 - Math.abs(anglePos - angleSpeed) * 2) / 2;
     const isApproaching = Math.abs(angle) < 90;
 
-    console.log(`Angle: ${Math.round(angle)} Is approaching: ${isApproaching}`);
+    //console.log(`Angle: ${Math.round(angle)} Is approaching: ${isApproaching}`);
     return {
       distance: distance(p1.currentPos, p2.currentPos),
       isApproaching: isApproaching

@@ -180,6 +180,17 @@ function setOutput(data) {
 
 document.getElementById("zIndexShift").addEventListener("click", zShift);
 
+var counter = 0;
+
+document.body.addEventListener("pointerleave", opMaster);
+
+
+
+document.getElementById("open3").addEventListener("click", op4);
+document.getElementById("open4").addEventListener("click", op3);
+document.getElementById("open5").addEventListener("click", op2);
+
+
 var toggleZ = true;
 
 function zShift(){
@@ -190,7 +201,119 @@ function zShift(){
     document.getElementById("interaction").style.zIndex = "0";
     toggleZ= true;
   }
-  console.log(toggleZ);
+
+  //console.log(toggleZ);
+}
+
+
+
+function opMaster(){
+  if(pointNum==4){
+    if(counter==4){
+    op2();
+    console.log("4");
+    counter = 0;
+    }else{
+      counter++;
+    }
+  }
+  else if(pointNum==3){
+    if(counter==3){
+      op3();
+      console.log("3");
+      counter = 0;
+      }else{
+        counter++;
+      }
+  }
+  else if(pointNum==2){
+    if(counter==2){
+      op4();
+      console.log("2");
+      counter = 0;
+      }else{
+        counter++;
+      }
+  }
+  else if(pointNum==1){
+    op5();
+    console.log("1");
+  }
+  
+}
+
+var disc4state = true;
+var disc3state = true;
+var disc2state = true;
+var openAll = true;
+
+function op4(){
+  disc3state = true;
+  disc2state = true;
+  document.getElementById("disc3").style.opacity = "1";
+  if(disc4state){
+  document.getElementById("disc4").style.opacity = "0";
+  disc4state = !disc4state;
+  }
+  else  {
+  document.getElementById("disc4").style.opacity = "1";
+  disc4state = !disc4state;
+  }
+}
+
+
+function op3(){
+  disc4state = true;
+  disc2state = true
+  document.getElementById("disc2").style.opacity = "1";
+  if(disc3state){
+  document.getElementById("disc3").style.opacity = "0";
+  document.getElementById("disc4").style.opacity = "0";
+  disc3state = !disc3state;
+  
+  
+  } else{
+    document.getElementById("disc3").style.opacity = "1";
+    document.getElementById("disc4").style.opacity = "1";
+    disc3state = !disc3state;
+   
+  }
+}
+
+function op2(){
+  disc3state = true;
+  disc4state = true
+  if(disc2state){
+  document.getElementById("disc2").style.opacity = "0";
+  document.getElementById("disc3").style.opacity = "0";
+  document.getElementById("disc4").style.opacity = "0";
+  disc2state = !disc2state; 
+   
+  }
+  else  {
+    document.getElementById("disc2").style.opacity = "1";
+    document.getElementById("disc3").style.opacity = "1";
+    document.getElementById("disc4").style.opacity = "1";
+    disc2state = !disc2state;
+   
+  }  
+}
+function op5(){
+if(openAll){
+  document.getElementById("disc5").style.opacity = "1";
+  document.getElementById("disc4").style.opacity = "1";
+  document.getElementById("disc3").style.opacity = "1";
+  document.getElementById("disc2").style.opacity = "1";
+  document.getElementById("disc1").style.opacity = "1";
+  openAll = false;
+}else{
+  document.getElementById("disc1").style.opacity = "0";
+  document.getElementById("disc2").style.opacity = "0";
+  document.getElementById("disc3").style.opacity = "0";
+  document.getElementById("disc4").style.opacity = "0";
+  document.getElementById("disc5").style.opacity = "1";
+  openAll = true;
+}
 }
 
 

@@ -53,8 +53,9 @@ z-index: 0;
   left: -650px;
   right: -650px;
   bottom: -650px;
-  background: tomato;
+  background: rgb(27, 27, 27);
   transition-delay: 0s;
+  opacity: 0;
 }
 .open .l1 {
   transition-delay: 0.4s;
@@ -78,8 +79,9 @@ z-index: 0;
   left: -400px;
   right: -400px;
   bottom: -400px;
-  background: #ff7a39;
+  background: #303030;
   transition-delay: 0.1s;
+  opacity: 0;
 }
 .open .l2 {
   transition-delay: 0.3s;
@@ -104,8 +106,9 @@ z-index: 0;
   left: -200px;
   right: -200px;
   bottom: -200px;
-  background: #ff912b;
+  background: #3f3f3f;
   transition-delay: 0.2s;
+  opacity: 0;
 }
 .open .l3 {
   transition-delay: 0.2s;
@@ -130,8 +133,9 @@ z-index: 0;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background: #ffa91c;
+  background: #4b4b4b;
   transition-delay: 0.3s;
+  opacity: 0;
 }
 .open .l4 {
   transition-delay: 0.1s;
@@ -155,7 +159,7 @@ z-index: 0;
   left: 170px;
   right: 170px;
   bottom: 170px;
-  background: #ffc00e;
+  background: rgb(77, 77, 77);
   transition-delay: 0.4s;
   z-index: 50;
 }
@@ -180,7 +184,7 @@ z-index: 0;
 .toggle {
   line-height: 100px;
   padding: 0;
-  background: gold;
+  background: rgb(92, 92, 92);
   opacity: 1;
   -webkit-transform: none;
           transform: none;
@@ -221,4 +225,22 @@ z-index: 0;
   position: absolute;
   top: 0;
   z-index: 5000;
+  height: 100px;
+  width: 100px;
+}
+
+#open3{
+position: absolute;
+top: 120px;
+height: 50px;
+}
+#open4{
+position: absolute;
+top: 170px;
+height:50px;
+}
+#open5{
+position: absolute;
+top: 220px;
+height:50px;
 }
