@@ -55,6 +55,7 @@ function displayData () {
   document.getElementById("data").innerHTML = text;
 }
 
+
 function onPointerUp(e) {
   pointers.removePointer(e.pointerId);
   let el = getOrCreate(e);
@@ -113,7 +114,7 @@ if (document.readyState != 'loading') onDocumentReady();
 else document.addEventListener('DOMContentLoaded', onDocumentReady);
 
 
-
+/*
 toggle = document.querySelectorAll(".toggle")[0];
 nav = document.querySelectorAll("nav")[0];
 toggle_open_text = 'Menu';
@@ -130,6 +131,7 @@ toggle.addEventListener('click', function() {
     toggle.innerHTML = toggle_open_text;
   }
 }, false);
+*/
 
 
 
@@ -142,6 +144,7 @@ var region = new ZingTouch.Region(target);
 
 
 region.bind(target, 'rotate', function(e) {
+
   if( pointNum == 5){
     var rotatable = document.getElementById('disc1');
   } else if(pointNum == 4){
@@ -175,6 +178,7 @@ function setOutput(data) {
   }
   var output = document.getElementById('output');
   output.innerHTML = outputStr;
+  //console.log(abspeed);
 }
 
 
@@ -189,6 +193,7 @@ document.body.addEventListener("pointerleave", opMaster);
 document.getElementById("open3").addEventListener("click", op4);
 document.getElementById("open4").addEventListener("click", op3);
 document.getElementById("open5").addEventListener("click", op2);
+
 
 
 var toggleZ = true;
@@ -208,11 +213,12 @@ function zShift(){
 
 
 function opMaster(){
+if(abspeed<600 && abspeed>0){
   if(pointNum==4){
     if(counter==4){
-    op2();
-    console.log("4");
-    counter = 0;
+      op2();
+      //console.log("4");
+      counter = 0;
     }else{
       counter++;
     }
@@ -220,26 +226,26 @@ function opMaster(){
   else if(pointNum==3){
     if(counter==3){
       op3();
-      console.log("3");
+      //console.log("3");
       counter = 0;
-      }else{
-        counter++;
-      }
+    }else{
+      counter++;
+    }
   }
   else if(pointNum==2){
     if(counter==2){
       op4();
-      console.log("2");
+      //console.log("2");
       counter = 0;
       }else{
         counter++;
       }
   }
   else if(pointNum==1){
-    op5();
-    console.log("1");
+    //op5();
+    //console.log("1");
   }
-  
+ }
 }
 
 var disc4state = true;
@@ -316,8 +322,8 @@ if(openAll){
 }
 }
 
-
+/*
 setTimeout(function(){
 	nav.classList.toggle('open');	
 }, 800);
-
+*/

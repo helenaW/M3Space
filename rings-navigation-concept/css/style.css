@@ -4,8 +4,9 @@ html, body {
 }
 
 body {
-  background: rgb(17, 17, 17);
+  background: hsl(0, 0%, 10%);
   font-family: Alegreya Sans, sans-serif;
+  color: hsl(0, 0%, 10%);
 }
 
 nav {
@@ -26,6 +27,8 @@ nav.top-right {
   right: -720px;
 }
 
+
+
 .disc {
   position: absolute;
   display: inline-block;
@@ -42,9 +45,11 @@ nav.top-right {
 
 .points{
   z-index: 100;
-  font-size: 130pt;
+  font-size: 80pt;
   padding-bottom:90px;
-  color: rgb(233, 233, 233);
+  color: rgb(112, 112, 112);
+  font-family: "Roboto";
+  margin-top: 20px;
 }
 
 #discDiv{
@@ -61,9 +66,10 @@ z-index: 0;
   left: -650px;
   right: -650px;
   bottom: -650px;
-  background: rgb(27, 27, 27);
+  background: hsl(0, 0%, 13%);
   transition-delay: 0s;
   opacity: 0;
+  box-shadow: -5px -5px 60px hsl(0, 0%, 9%);
 }
 .open .l1 {
   transition-delay: 0.4s;
@@ -87,9 +93,10 @@ z-index: 0;
   left: -400px;
   right: -400px;
   bottom: -400px;
-  background: #303030;
+  background: hsl(0, 0%, 16%);
   transition-delay: 0.1s;
   opacity: 0;
+  box-shadow: -5px -5px 60px hsl(0, 0%, 10%);
 }
 .open .l2 {
   transition-delay: 0.3s;
@@ -114,9 +121,10 @@ z-index: 0;
   left: -200px;
   right: -200px;
   bottom: -200px;
-  background: #3f3f3f;
+  background: hsl(0, 0%, 19%);
   transition-delay: 0.2s;
   opacity: 0;
+  box-shadow: -5px -5px 60px hsl(0, 0%, 11%);
 }
 .open .l3 {
   transition-delay: 0.2s;
@@ -141,9 +149,10 @@ z-index: 0;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background: #4b4b4b;
+  background: hsl(0, 0%, 22.5%);
   transition-delay: 0.3s;
   opacity: 0;
+  box-shadow: -5px -5px 60px hsl(0, 0%, 12%);
 }
 .open .l4 {
   transition-delay: 0.1s;
@@ -167,9 +176,10 @@ z-index: 0;
   left: 170px;
   right: 170px;
   bottom: 170px;
-  background: rgb(77, 77, 77);
+  background: hsl(0, 0%, 26%);
   transition-delay: 0.4s;
   z-index: 50;
+  box-shadow: -5px -5px 60px hsl(0, 0%, 13%); 
 }
 .open .l5 {
   transition-delay: 0s;
@@ -192,7 +202,7 @@ z-index: 0;
 .toggle {
   line-height: 100px;
   padding: 0;
-  background: rgb(92, 92, 92);
+  background: hsl(0, 0%, 25%);
   opacity: 1;
   -webkit-transform: none;
           transform: none;
@@ -235,20 +245,24 @@ z-index: 0;
   z-index: 5000;
   height: 100px;
   width: 100px;
+  visibility:hidden;
 }
 
 #open3{
 position: absolute;
 top: 120px;
 height: 50px;
+visibility:hidden;
 }
 #open4{
 position: absolute;
 top: 170px;
 height:50px;
+visibility:hidden;
 }
 #open5{
 position: absolute;
 top: 220px;
 height:50px;
+visibility:hidden;
 }
