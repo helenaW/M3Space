@@ -4,15 +4,15 @@ html, body {
 }
 
 body {
-  background: beige;
+  background: rgb(17, 17, 17);
   font-family: Alegreya Sans, sans-serif;
 }
 
 nav {
   display: block;
   position: fixed;
-  width: 900px;
-  height: 900px;
+  width: 1500px;
+  height: 1500px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -22,8 +22,8 @@ nav.open {
 
 }
 nav.top-right {
-  top: -140px;
-  right: -140px;
+  top: 740px;
+  right: -720px;
 }
 
 .disc {
@@ -39,7 +39,15 @@ nav.top-right {
   opacity: 0;
   cursor: pointer;
 }
-.discDiv {
+
+.points{
+  z-index: 100;
+  font-size: 130pt;
+  padding-bottom:90px;
+  color: rgb(233, 233, 233);
+}
+
+#discDiv{
 z-index: 0;
 
 }
