@@ -125,6 +125,10 @@ z-index: 0;
   transition-delay: 0.2s;
   opacity: 0;
   box-shadow: -5px -5px 60px hsl(0, 0%, 11%);
+  width: 122%;
+  height: 122%;
+  margin-left: 2%;
+  margin-top: 2%;
 }
 .open .l3 {
   transition-delay: 0.2s;
@@ -153,6 +157,11 @@ z-index: 0;
   transition-delay: 0.3s;
   opacity: 0;
   box-shadow: -5px -5px 60px hsl(0, 0%, 12%);
+  width: 90%;
+  height: 90%;
+  margin-left: 4.5%;
+  margin-top: 4.5%;
+
 }
 .open .l4 {
   transition-delay: 0.1s;
@@ -180,6 +189,10 @@ z-index: 0;
   transition-delay: 0.4s;
   z-index: 50;
   box-shadow: -5px -5px 60px hsl(0, 0%, 13%); 
+  width: 55%;
+  height: 55%;
+  margin-left: 11%;
+  margin-top: 11%;
 }
 .open .l5 {
   transition-delay: 0s;
@@ -225,7 +238,7 @@ z-index: 0;
   position: absolute;
   Height: 100vh;
   width: 100%;
-  z-index: 1000;
+  z-index: 0;
  
 
   

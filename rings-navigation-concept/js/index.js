@@ -48,7 +48,9 @@ function displayData () {
           "Distance between 1. & 2. pointers: " + distance + "<br/>" +
           "Pointer 1 & 2 approaching: " + isApproaching;
           abspeed = Math.round(pg.speed);
+          if(pointers.numOfPointers >0){
           pointNum = pointers.numOfPointers;
+          }
           movUp = pg.isMovingUp;
           movLeft = pg.isMovingLeft;
   } 
@@ -139,26 +141,94 @@ var currentAngle = 15;
 //Using a layer on top of the entire page for "fat-finger" detection on mobile devices.
 //document.getElementById('disc5').style.transform = 'rotate(15deg)';
 
-var target = document.getElementById('interaction');
-var region = new ZingTouch.Region(target);
+var target5 = document.getElementById('disc5');
+var region5 = new ZingTouch.Region(target5);
 
 
-region.bind(target, 'rotate', function(e) {
+region5.bind(target5, 'rotate', function(e) {
 
-  if( pointNum == 5){
-    var rotatable = document.getElementById('disc1');
-  } else if(pointNum == 4){
-    var rotatable = document.getElementById('disc2');
-  } else if(pointNum == 3){
-    var rotatable = document.getElementById('disc3');
-  } else if(pointNum == 2){
-    var rotatable = document.getElementById('disc4');
-  } else if (pointNum == 1){
-    var rotatable = document.getElementById('disc5');
-  } else{
-    //lol
-  }
-  
+  var rotatable = document.getElementById('disc5');
+
+  currentAngle += e.detail.distanceFromLast;
+  rotatable.style.transform = 'rotate(' + currentAngle + 'deg)';
+
+  setOutput([
+    ['Gesture', 'Rotate'],
+    ['angle', Math.floor(e.detail.angle) + "°"],
+    ['distanceFromOrigin', Math.floor(e.detail.distanceFromOrigin) + "°"],
+    ['distanceFromLast', Math.floor(e.detail.distanceFromLast) + "°"]
+  ]);
+
+});
+
+var target4 = document.getElementById('disc4');
+var region4 = new ZingTouch.Region(target4);
+
+
+region4.bind(target4, 'rotate', function(e) {
+
+  var rotatable = document.getElementById('disc4');
+
+  currentAngle += e.detail.distanceFromLast;
+  rotatable.style.transform = 'rotate(' + currentAngle + 'deg)';
+
+  setOutput([
+    ['Gesture', 'Rotate'],
+    ['angle', Math.floor(e.detail.angle) + "°"],
+    ['distanceFromOrigin', Math.floor(e.detail.distanceFromOrigin) + "°"],
+    ['distanceFromLast', Math.floor(e.detail.distanceFromLast) + "°"]
+  ]);
+
+});
+
+var target3 = document.getElementById('disc3');
+var region3 = new ZingTouch.Region(target3);
+
+
+region3.bind(target3, 'rotate', function(e) {
+
+  var rotatable = document.getElementById('disc3');
+
+  currentAngle += e.detail.distanceFromLast;
+  rotatable.style.transform = 'rotate(' + currentAngle + 'deg)';
+
+  setOutput([
+    ['Gesture', 'Rotate'],
+    ['angle', Math.floor(e.detail.angle) + "°"],
+    ['distanceFromOrigin', Math.floor(e.detail.distanceFromOrigin) + "°"],
+    ['distanceFromLast', Math.floor(e.detail.distanceFromLast) + "°"]
+  ]);
+
+});
+
+var target2 = document.getElementById('disc2');
+var region2 = new ZingTouch.Region(target2);
+
+
+region2.bind(target2, 'rotate', function(e) {
+
+  var rotatable = document.getElementById('disc2');
+
+  currentAngle += e.detail.distanceFromLast;
+  rotatable.style.transform = 'rotate(' + currentAngle + 'deg)';
+
+  setOutput([
+    ['Gesture', 'Rotate'],
+    ['angle', Math.floor(e.detail.angle) + "°"],
+    ['distanceFromOrigin', Math.floor(e.detail.distanceFromOrigin) + "°"],
+    ['distanceFromLast', Math.floor(e.detail.distanceFromLast) + "°"]
+  ]);
+
+});
+
+var target1 = document.getElementById('disc1');
+var region1 = new ZingTouch.Region(target1);
+
+
+region1.bind(target1, 'rotate', function(e) {
+
+  var rotatable = document.getElementById('disc1');
+
   currentAngle += e.detail.distanceFromLast;
   rotatable.style.transform = 'rotate(' + currentAngle + 'deg)';
 
@@ -181,21 +251,16 @@ function setOutput(data) {
   //console.log(abspeed);
 }
 
-
-document.getElementById("zIndexShift").addEventListener("click", zShift);
-
-var counter = 0;
-
 document.body.addEventListener("pointerleave", opMaster);
 
 
-
+/*
 document.getElementById("open3").addEventListener("click", op4);
 document.getElementById("open4").addEventListener("click", op3);
 document.getElementById("open5").addEventListener("click", op2);
+*/ 
 
-
-
+/*
 var toggleZ = true;
 
 function zShift(){
@@ -210,17 +275,20 @@ function zShift(){
   //console.log(toggleZ);
 }
 
+*/
 
+
+var counter = 0;
 
 function opMaster(){
-if(abspeed<600 && abspeed>0){
+  console.log(pointNum);
   if(pointNum==4){
     if(counter==4){
       op2();
       //console.log("4");
       counter = 0;
     }else{
-      counter++;
+      ++counter;
     }
   }
   else if(pointNum==3){
@@ -229,7 +297,7 @@ if(abspeed<600 && abspeed>0){
       //console.log("3");
       counter = 0;
     }else{
-      counter++;
+      ++counter;
     }
   }
   else if(pointNum==2){
@@ -238,7 +306,7 @@ if(abspeed<600 && abspeed>0){
       //console.log("2");
       counter = 0;
       }else{
-        counter++;
+        ++counter;
       }
   }
   else if(pointNum==1){
@@ -246,7 +314,9 @@ if(abspeed<600 && abspeed>0){
     //console.log("1");
   }
  }
-}
+
+
+
 
 var disc4state = true;
 var disc3state = true;
